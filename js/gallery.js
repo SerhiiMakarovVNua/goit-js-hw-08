@@ -90,18 +90,18 @@ const galleryCardsArr = images.map(imgInfo => createGalleryCard(imgInfo));
 const galleryListEl = document.querySelector('.gallery');
 galleryListEl.append(...galleryCardsArr);
 
-const css = '.gallery { list-style-type: none;  margin: 0 auto; padding: 0; display: flex; justify-content: center; flex-direction: row; flex-wrap: wrap; row-gap: 24px; column-gap: 24px;}' +
-            '.gallery-image {display: block; transition: transform 0.3s ease; }' +
+const css = '.gallery { list-style-type: none; margin: 0 auto; padding: 0; display: flex; justify-content: center; flex-direction: row; flex-wrap: wrap; row-gap: 24px; column-gap: 24px;}' +
+            '.gallery-image {display: block; transition: transform 0.3s ease; cursor: pointer;}' +
             '.gallery-image:hover {transform: scale(1.045);};' +
             '.gallery-item {overflow: hidden;};'
 const styleElement = document.createElement('style');
 styleElement.appendChild(document.createTextNode(css));
 document.head.appendChild(styleElement);
 
-const lists = document.querySelector("ul.gallery");
-lists.addEventListener("click", function (event) {
-  console.log(event.target);
-});
+// const lists = document.querySelector("ul.gallery");
+// lists.addEventListener("click", function (event) {
+//   console.log(event.target);
+// });
 
 galleryListEl.addEventListener('click', function (event) {
   event.preventDefault();
